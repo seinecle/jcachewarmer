@@ -1,0 +1,3 @@
+net\clementlevallois\cachewarmer\controller\Crawler.class
+net\clementlevallois\cachewarmer\controller\ErrorWriter.class
+net\clementlevallois\cachewarmer\controller\CacheWarmer.class
