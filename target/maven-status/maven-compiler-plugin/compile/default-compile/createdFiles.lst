@@ -1,3 +1,9 @@
-net\clementlevallois\cachewarmer\controller\Crawler.class
-net\clementlevallois\cachewarmer\controller\ErrorWriter.class
-net\clementlevallois\cachewarmer\controller\CacheWarmer.class
+net\clementlevallois\cachewarmer\controller\Clock.class
+net\clementlevallois\cachewarmer\logwriters\ErrorWriter.class
+net\clementlevallois\cachewarmer\logwriters\InfoWriter.class
+module-info.class
+net\clementlevallois\cachewarmer\controller\Controller.class
+net\clementlevallois\cachewarmer\crawler\Crawler.class
+net\clementlevallois\cachewarmer\pagevisitors\PageVisitorInterface.class
+net\clementlevallois\cachewarmer\properties\CacheWarmerParameters.class
+net\clementlevallois\cachewarmer\pagevisitors\PageVisitorWithUrlConnect.class

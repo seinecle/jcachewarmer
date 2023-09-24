@@ -1,1 +1,5 @@
-net\clementlevallois\cachewarmer\tests\GeneralTest.class
+net\clementlevallois\cachewarmer\tests\CacheWarmerParametersTest.class
+net\clementlevallois\cachewarmer\tests\InfoWriterTest.class
+net\clementlevallois\cachewarmer\tests\CrawlerTest.class
+module-info.class
+net\clementlevallois\cachewarmer\tests\ErrorWriterTest.class

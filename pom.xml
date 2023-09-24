@@ -7,11 +7,8 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <exec.mainClass>net.clementlevallois.cachewarmer.controller.CacheWarmer</exec.mainClass>
-        <webmagic.version>0.9.0</webmagic.version>
-        <app.main.class>net.clementlevallois.cachewarmer.controller.CacheWarmer</app.main.class>
+        <exec.mainClass>net.clementlevallois.cachewarmer.controller.Controller</exec.mainClass>
+        <app.main.class>net.clementlevallois.cachewarmer.controller.Controller</app.main.class>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
         <jdk.version>17.0.2</jdk.version>
@@ -20,26 +17,25 @@
         <maven.compiler.release>${java.version}</maven.compiler.release>
     </properties>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.12.0</version>
-        </dependency>
         <!--for tests-->        
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
     <name>cache-warmer</name>
     <description>A cache warmer from the command line</description>
-    <url>https://github.com/jreleaser/helloworld-java-jlink</url>
+    <url>https://github.com/seinecle/jcachewarmer</url>
     <inceptionYear>2023</inceptionYear>
-  
-
+ 
     <licenses>
         <license>
             <name>Apache-2.0</name>
@@ -50,15 +46,15 @@
 
     <developers>
         <developer>
-            <id>aalmiray</id>
-            <name>Andres Almiray</name>
+            <id>seinecle</id>
+            <name>Clement Levallois</name>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/jreleaser/helloworld-java-jlink.git</connection>
-        <developerConnection>scm:git:https://github.com/jreleaser/helloworld-java-jlink.git</developerConnection>
-        <url>https://github.com/jreleaser/helloworld-java-jlink.git</url>
+        <connection>scm:git:https://github.com/seinecle/jcachewarmer.git</connection>
+        <developerConnection>scm:git:https://github.com/seinecle/jcachewarmer.git</developerConnection>
+        <url>https://github.com/seinecle/jcachewarmer.git</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -83,61 +79,4 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile>
-            <id>jdks</id>
-            <build>
-                <defaultGoal>jdks:setup-disco</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jreleaser</groupId>
-                        <artifactId>jdks-maven-plugin</artifactId>
-                        <version>1.5.1</version>
-                        <configuration>
-                            <pkgs>
-                                <pkg>
-                                    <name>zulu17LinuxMuslIntel</name>
-                                    <platform>linux-x86_64</platform>
-                                    <version>${jdk.version}</version>
-                                    <libcType>musl</libcType>
-                                    <archiveType>tar.gz</archiveType>
-                                </pkg>
-                                <pkg>
-                                    <name>zulu17LinuxIntel</name>
-                                    <platform>linux-x86_64</platform>
-                                    <version>${jdk.version}</version>
-                                </pkg>
-                                <pkg>
-                                    <name>zulu17OsxIntel</name>
-                                    <platform>osx-x86_64</platform>
-                                    <version>${jdk.version}</version>
-                                </pkg>
-                                <pkg>
-                                    <name>zulu17WindowsIntel</name>
-                                    <platform>windows-x86_64</platform>
-                                    <version>${jdk.version}</version>
-                                </pkg>
-                                <pkg>
-                                    <name>zulu17LinuxArm</name>
-                                    <platform>linux-aarch64</platform>
-                                    <version>${jdk.version}</version>
-                                    <archiveType>tar.gz</archiveType>
-                                </pkg>
-                                <pkg>
-                                    <name>zulu17OsxArm</name>
-                                    <platform>osx-aarch64</platform>
-                                    <version>${jdk.version}</version>
-                                </pkg>
-                                <pkg>
-                                    <name>zulu17WindowsArm</name>
-                                    <platform>windows-aarch64</platform>
-                                    <version>${jdk.version}</version>
-                                </pkg>
-                            </pkgs>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: net.clementlevallois.cachewarmer.tests.GeneralTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.35 s - in net.clementlevallois.cachewarmer.tests.GeneralTest

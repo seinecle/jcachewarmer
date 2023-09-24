@@ -1,0 +1,2 @@
+# one url of a site map per line.
+https://nocodefunctions.com/sitemap.xml
